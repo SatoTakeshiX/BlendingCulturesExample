@@ -17,8 +17,12 @@ enum Rank: Int, CustomStringConvertible {
     
     static let numberOfRank = 13
     
-    static func randomSuit() -> Rank {
+    static func randomRank() -> Rank {
         return Rank(rawValue: randomValue(numberOfRank))!
+    }
+    
+    static var allRanks: [Rank] {
+        return (0..<numberOfRank).map { Rank(rawValue: $0)! }
     }
     
     var description: String {
@@ -41,6 +45,10 @@ enum Suit: Int, CustomStringConvertible {
         return Suit(rawValue: randomValue(numberOfSuit))!
     }
     
+    static var allSuits: [Suit] {
+        return (0..<numberOfSuit).map { Suit(rawValue: $0)! }
+    }
+    
     var description: String {
         switch self {
         case Heart: return "♥"
@@ -56,7 +64,7 @@ struct Card {
     private(set) var suit: Suit
     
     static func randomCard() -> Card {
-        return Card(Rank.randomSuit(),Suit.randomSuit())
+        return Card(Rank.randomRank(),Suit.randomSuit())
     }
     
     init(_ rank: Rank, _ suit: Suit) {

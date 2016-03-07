@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18341B6F1C8DDFD8000B225F /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18341B6E1C8DDFD8000B225F /* Deck.swift */; };
 		4D1614951C871FF7004ABBE6 /* HandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1614941C871FF7004ABBE6 /* HandVC.swift */; };
 		4D1614971C8720E3004ABBE6 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1614961C8720E3004ABBE6 /* Hand.swift */; };
 		4D1614991C872AA4004ABBE6 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1614981C872AA4004ABBE6 /* Card.swift */; };
@@ -22,10 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18341B6E1C8DDFD8000B225F /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		4D1614941C871FF7004ABBE6 /* HandVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandVC.swift; sourceTree = "<group>"; };
 		4D1614961C8720E3004ABBE6 /* Hand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		4D1614981C872AA4004ABBE6 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		4D16149A1C872F25004ABBE6 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		4D16149A1C872F25004ABBE6 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardCell.swift; path = ../Views/CardCell.swift; sourceTree = "<group>"; };
 		4D16149C1C873945004ABBE6 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		4D16149E1C873A37004ABBE6 /* SourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceType.swift; sourceTree = "<group>"; };
 		4D1614A01C873B09004ABBE6 /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
@@ -49,6 +51,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18341B701C8DE5F8000B225F /* Backyard */ = {
+			isa = PBXGroup;
+			children = (
+				4D16149A1C872F25004ABBE6 /* CardCell.swift */,
+				4D1614A01C873B09004ABBE6 /* DataType.swift */,
+				4D16149E1C873A37004ABBE6 /* SourceType.swift */,
+				4D16149C1C873945004ABBE6 /* DataSource.swift */,
+				4D1614A21C873C8F004ABBE6 /* HandDataSource.swift */,
+			);
+			name = Backyard;
+			path = Classes/Models;
+			sourceTree = "<group>";
+		};
 		4D16148F1C871FDE004ABBE6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +85,9 @@
 		4D1614911C871FDE004ABBE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4D1614A01C873B09004ABBE6 /* DataType.swift */,
+				18341B6E1C8DDFD8000B225F /* Deck.swift */,
 				4D1614961C8720E3004ABBE6 /* Hand.swift */,
 				4D1614981C872AA4004ABBE6 /* Card.swift */,
-				4D16149E1C873A37004ABBE6 /* SourceType.swift */,
-				4D16149C1C873945004ABBE6 /* DataSource.swift */,
-				4D1614A21C873C8F004ABBE6 /* HandDataSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -83,7 +95,7 @@
 		4D1614931C871FDE004ABBE6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4D16149A1C872F25004ABBE6 /* CardCell.swift */,
+				4D7FF8D11C871EEC0051A1FB /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -109,10 +121,10 @@
 			children = (
 				4D16148F1C871FDE004ABBE6 /* Classes */,
 				4D7FF8CD1C871EEC0051A1FB /* AppDelegate.swift */,
-				4D7FF8D11C871EEC0051A1FB /* Main.storyboard */,
 				4D7FF8D41C871EEC0051A1FB /* Assets.xcassets */,
 				4D7FF8D61C871EEC0051A1FB /* LaunchScreen.storyboard */,
 				4D7FF8D91C871EEC0051A1FB /* Info.plist */,
+				18341B701C8DE5F8000B225F /* Backyard */,
 			);
 			path = BlendingCulturesExample;
 			sourceTree = "<group>";
@@ -189,6 +201,7 @@
 			files = (
 				4D16149D1C873945004ABBE6 /* DataSource.swift in Sources */,
 				4D16149B1C872F25004ABBE6 /* CardCell.swift in Sources */,
+				18341B6F1C8DDFD8000B225F /* Deck.swift in Sources */,
 				4D1614971C8720E3004ABBE6 /* Hand.swift in Sources */,
 				4D1614A31C873C8F004ABBE6 /* HandDataSource.swift in Sources */,
 				4D16149F1C873A37004ABBE6 /* SourceType.swift in Sources */,
@@ -208,6 +221,7 @@
 				4D7FF8D21C871EEC0051A1FB /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		4D7FF8D61C871EEC0051A1FB /* LaunchScreen.storyboard */ = {
