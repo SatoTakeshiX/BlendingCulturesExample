@@ -27,7 +27,7 @@
 		4D1614941C871FF7004ABBE6 /* HandVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandVC.swift; sourceTree = "<group>"; };
 		4D1614961C8720E3004ABBE6 /* Hand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		4D1614981C872AA4004ABBE6 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
-		4D16149A1C872F25004ABBE6 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CardCell.swift; path = ../Views/CardCell.swift; sourceTree = "<group>"; };
+		4D16149A1C872F25004ABBE6 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		4D16149C1C873945004ABBE6 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		4D16149E1C873A37004ABBE6 /* SourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceType.swift; sourceTree = "<group>"; };
 		4D1614A01C873B09004ABBE6 /* DataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
@@ -54,7 +54,6 @@
 		18341B701C8DE5F8000B225F /* Backyard */ = {
 			isa = PBXGroup;
 			children = (
-				4D16149A1C872F25004ABBE6 /* CardCell.swift */,
 				4D1614A01C873B09004ABBE6 /* DataType.swift */,
 				4D16149E1C873A37004ABBE6 /* SourceType.swift */,
 				4D16149C1C873945004ABBE6 /* DataSource.swift */,
@@ -95,6 +94,7 @@
 		4D1614931C871FDE004ABBE6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D16149A1C872F25004ABBE6 /* CardCell.swift */,
 				4D7FF8D11C871EEC0051A1FB /* Main.storyboard */,
 			);
 			path = Views;

@@ -10,7 +10,7 @@ import UIKit
 
 class HandVC: UITableViewController {
     
-    private let hand  = Hand()
+    private var hand  = Hand()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +19,8 @@ class HandVC: UITableViewController {
 
     @IBAction private func addNewCard(sender: UIBarButtonItem) {
         if hand.numberOfCards < 5 {
-            hand.addNewCardAtIndex(0)
+            hand = hand.addNewCardAtIndex(0)
             insertTopRow()
-//            tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Fade)
         }
     }
     
@@ -35,19 +34,20 @@ class HandVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cardCell", forIndexPath: indexPath)
-        let card = hand.cardAtPosition(indexPath.row)
-        cell.textLabel?.text = card.rank.description
-        cell.textLabel?.textColor = card.color
-        cell.detailTextLabel?.text = card.suit.description
+        guard let cell = tableView
+                         .dequeueReusableCellWithIdentifier("cardCell",
+                                                            forIndexPath: indexPath) as? CardCell else {
+            fatalError("Could not create CardCell")
+        }
+        cell.fillWith(hand.cardAtPosition(indexPath.row))
         return cell
     }
     
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle,
+                            forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            hand.deleteCardAtIndex(indexPath.row)
+            hand = hand.deleteCardAtIndex(indexPath.row)
             deleteRowAtIndexPath(indexPath)
-//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         }
     }
     
@@ -56,6 +56,6 @@ class HandVC: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-        hand.moveCard(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+        hand = hand.moveCard(sourceIndexPath.row, toIndex: destinationIndexPath.row)
     }
 }
