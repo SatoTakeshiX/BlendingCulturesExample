@@ -2,7 +2,7 @@
 //  DataSource.swift
 //  BlendingCulturesExample
 //
-//  Created by Suguru Kishimoto on 2016/03/03.
+//  Created by Masashi Sutou on 2016/03/11.
 //
 //
 
@@ -10,13 +10,14 @@ import UIKit
 
 class DataSource: NSObject, UITableViewDataSource, SourceType {
     
-    var dataObject: DataType = Hand()
+    var dataObject: DataType
     
-    func addItemTo(tableView: UITableView) {
-        if dataObject.numberOfItems < 5 {
-            dataObject = dataObject.addNewItemAtIndex(0)
-            insertTopRowIn(tableView)
-        }
+    var conditionForAdding :Bool {
+        return false
+    }
+    
+    init<A: DataType>(dataObject: A) {
+        self.dataObject = dataObject
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,44 +48,4 @@ class DataSource: NSObject, UITableViewDataSource, SourceType {
     func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
         dataObject = dataObject.moveItem(fromIndexPath.row, toIndex: toIndexPath.row)
     }
-    
-//    func tableView(tableView: UITableView,
-//                   moveRowAtIndexPath fromIndexPath: NSIndexPath,
-//                   toIndexPath: NSIndexPath) {}
-
-//    var dataObject: DataType
-//    var conditionForAdding: Bool {
-//        return false
-//    }
-//    
-//    init<A: DataType>(dataObject: A) {
-//        self.dataObject = dataObject
-//    }
-//
-//    func addItemTo(tableView: UITableView) {
-//        if conditionForAdding {
-//            dataObject = dataObject.addNewItemAtIndex(0)
-//            insertTopRowIn(tableView)
-//        }
-//    }
-//    
-//    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return dataObject.numberOfItems
-//    }
-//    
-//    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-//        fatalError("This method must be overridden")
-//    }
-//    
-//    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-//        if editingStyle == .Delete {
-//            dataObject = dataObject.deleteItemAtIndex(indexPath.row)
-//            deleteRowAtIndexPath(indexPath, from: tableView)
-//        }
-//    }
-//    
-//    func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-//        dataObject = dataObject.moveItem(fromIndexPath.row, toIndex: toIndexPath.row)
-//    }
-
 }

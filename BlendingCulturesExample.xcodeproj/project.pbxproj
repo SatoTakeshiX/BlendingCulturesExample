@@ -54,7 +54,6 @@
 		18341B701C8DE5F8000B225F /* Backyard */ = {
 			isa = PBXGroup;
 			children = (
-				4D1614A21C873C8F004ABBE6 /* HandDataSource.swift */,
 			);
 			name = Backyard;
 			path = Classes/Models;
@@ -87,6 +86,7 @@
 				4D1614A01C873B09004ABBE6 /* DataType.swift */,
 				4D16149C1C873945004ABBE6 /* DataSource.swift */,
 				4D16149E1C873A37004ABBE6 /* SourceType.swift */,
+				4D1614A21C873C8F004ABBE6 /* HandDataSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

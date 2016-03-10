@@ -2,7 +2,7 @@
 //  DataType.swift
 //  BlendingCulturesExample
 //
-//  Created by Suguru Kishimoto on 2016/03/03.
+//  Created by Masashi Sutou on 2016/03/11.
 //
 //
 

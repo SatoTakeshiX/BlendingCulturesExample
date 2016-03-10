@@ -2,7 +2,7 @@
 //  CardCell.swift
 //  BlendingCulturesExample
 //
-//  Created by Suguru Kishimoto on 2016/03/02.
+//  Created by Masashi Sutou on 2016/03/11.
 //
 //
 
